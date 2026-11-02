@@ -1,0 +1,6 @@
+/* Estilos do ProductListing */
+.productlisting {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}

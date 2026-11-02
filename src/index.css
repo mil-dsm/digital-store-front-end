@@ -1,0 +1,46 @@
+/* Estilos globais: cores do README (seção 2), reset e tipografia. */
+:root {
+  --primary: #c92071;
+  --secondary: #b5b6f2;
+  --tertiary: #991956;
+  --error: #ee4266;
+  --success: #52ca76;
+  --warning: #f6aa1c;
+
+  --dark-gray: #1f1f1f;
+  --dark-gray-2: #474747;
+  --dark-gray-3: #666666;
+  --light-gray: #8f8f8f;
+  --light-gray-2: #cccccc;
+  --light-gray-3: #f5f5f5;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--dark-gray-2);
+  background: var(--white);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Largura máxima do conteúdo, usada pelas páginas. */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
