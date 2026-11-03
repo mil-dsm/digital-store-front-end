@@ -11,6 +11,8 @@
 
 .productcard {
     width: 292px;
+    background: var(--white);
+    border-radius: 4px;
 }
 
 .productcard img {
@@ -22,4 +24,10 @@
 
 .productcard p {
     margin-top: 8px;
+}
+
+.productcard {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }

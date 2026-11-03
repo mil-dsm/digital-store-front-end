@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage'
 import ProductListingPage from './pages/ProductListingPage'
-import ProductViewPage from './pages/ProductViewPage'
+import ProductViewPage from './pages/ProductViewPage/ProductViewPage'
 import PlaceholderPage from './pages/PlaceholderPage'
 
 // Aqui ficam as rotas: cada URL aponta para uma página.

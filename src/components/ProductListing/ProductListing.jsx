@@ -1,5 +1,6 @@
 import ProductCard from '../ProductCard/ProductCard'
 import './ProductListing.css'
+import { Link } from 'react-router-dom'
 
 function ProductListing({ products }) {
   return (
@@ -7,6 +8,7 @@ function ProductListing({ products }) {
       {products.map((product) => (
         <ProductCard
           key={product.id}
+          id={product.id}
           image={product.image}
           name={product.name}
           price={product.price}

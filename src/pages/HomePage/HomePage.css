@@ -1,10 +1,21 @@
+.home-sections {
+    background: var(--background);
+    padding-bottom: 32px;
+}
+
 .home-collections {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 }
 
 .home-collections img {
+    width: 100%;
     border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+    .home-collections {
+        grid-template-columns: 1fr;
+    }
 }

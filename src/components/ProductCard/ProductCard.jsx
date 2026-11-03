@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom'
 import './ProductCard.css'
 
-// Props: id, image, name, price, priceDiscount
-function ProductCard({ image, name, price, priceDiscount }) {
+function ProductCard({ id, image, name, price, priceDiscount }) {
   return (
-    <div className="productcard">
+    <Link to={`/product/${id}`} className="productcard">
       <img src={image} alt={name} />
       <p>{name}</p>
+
       {priceDiscount ? (
         <>
           <p className="productcard__price productcard__price--old">${price}</p>
@@ -14,7 +15,7 @@ function ProductCard({ image, name, price, priceDiscount }) {
       ) : (
         <p className="productcard__price">${price}</p>
       )}
-    </div>
+    </Link>
   )
 }
 

@@ -1,11 +1,14 @@
 import { useParams } from 'react-router-dom'
-import Layout from './Layout'
-import Section from '../components/Section/Section'
-import { getProductById } from '../data/products'
-// import Gallery from '../components/Gallery/Gallery'
+import Layout from '../Layout'
+import Section from '../../components/Section/Section'
+import Gallery from '../../components/Gallery/Gallery'
+import { getProductById } from '../../data/products'
+import './ProductViewPage.css'
 // import BuyBox from '../components/BuyBox/BuyBox'
 // import ProductOptions from '../components/ProductOptions/ProductOptions'
 // import ProductListing from '../components/ProductListing/ProductListing'
+
+
 
 function ProductViewPage() {
   const { id } = useParams() // o ":id" da rota /product/:id
@@ -22,11 +25,21 @@ function ProductViewPage() {
   return (
     <Layout>
       <div className="container">
-        {/* TODO 7.1: <Gallery images={product.images} showThumbs width="700px" height="570px" radius="4px" /> */}
-        {/* TODO 7.3: <BuyBox ...> com dois <ProductOptions /> (tamanho e cor) como filhos */}
-        <h1>{product.name}</h1>
+        <div className="product-view">
+          <Gallery
+            images={product.images}
+            showThumbs
+            width="700px"
+            height="570px"
+            radius="4px"
+          />
 
-        {/* TODO 7.4: Section "Produtos recomendados" com link { text: 'Ver todos', href: '/products' } */}
+          <div className="product-view__info">
+            {/* TODO 7.3: aqui entra o <BuyBox /> */}
+            <h1>{product.name}</h1>
+          </div>
+        </div>
+
         <Section title="Produtos recomendados" titleAlign="left" link={{ text: 'Ver todos', href: '/products' }}>
           <p>TODO: ProductListing</p>
         </Section>

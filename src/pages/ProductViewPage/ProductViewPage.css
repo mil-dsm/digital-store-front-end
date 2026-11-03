@@ -1,0 +1,16 @@
+.product-view {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 32px;
+}
+
+.product-view .gallery {
+    flex: 0 1 700px;
+    margin: 0;
+}
+
+.product-view__info {
+    flex: 1 1 320px;
+}
