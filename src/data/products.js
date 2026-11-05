@@ -2,8 +2,8 @@
 // (name, image, price, priceDiscount) mais o que as páginas precisam:
 // id (para a rota /product/:id), brand/category (filtros) e os dados do BuyBox.
 //
-// ATENÇÃO: no Vite, arquivos da pasta public/ são servidos a partir da raiz.
-// Usaando "/product-thumb-1.jpeg" e NÃO "public/product-thumb-1.png" como escrito no README.
+// No Vite, arquivos da pasta public/ são servidos a partir da raiz.
+// Usando "/product-thumb-1.jpeg", não "public/product-thumb-1.png" como escrito no README.
 // Só existem 5 imagens de produto; elas se repetem nos 8 produtos.
 
 const productImages = [

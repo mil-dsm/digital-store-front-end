@@ -1,1 +1,31 @@
 /* Estilos do ProductOptions */
+.product-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.product-options__item {
+    cursor: pointer;
+    background: var(--white);
+    border: 1px solid var(--light-gray-2);
+}
+
+.product-options__item--square {
+    height: 46px;
+    min-width: 46px;
+    padding: 0 16px;
+    font-size: 24px;
+    color: var(--dark-gray-2);
+}
+
+.product-options__item--circle {
+    width: 31px;
+    height: 31px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.product-options__item--selected {
+    border: 2px solid var(--primary);
+}

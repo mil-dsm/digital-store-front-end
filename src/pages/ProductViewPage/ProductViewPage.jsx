@@ -7,8 +7,7 @@ import './ProductViewPage.css'
 // import BuyBox from '../components/BuyBox/BuyBox'
 // import ProductOptions from '../components/ProductOptions/ProductOptions'
 // import ProductListing from '../components/ProductListing/ProductListing'
-
-
+import ProductOptions from '../../components/ProductOptions/ProductOptions'
 
 function ProductViewPage() {
   const { id } = useParams() // o ":id" da rota /product/:id
@@ -35,8 +34,10 @@ function ProductViewPage() {
           />
 
           <div className="product-view__info">
-            {/* TODO 7.3: aqui entra o <BuyBox /> */}
+            {/* Teste BuyBox */}
             <h1>{product.name}</h1>
+            <ProductOptions options={product.sizes} shape="square" radius="4px" type="text" />
+            <ProductOptions options={product.colors} shape="circle" type="color" />
           </div>
         </div>
 
