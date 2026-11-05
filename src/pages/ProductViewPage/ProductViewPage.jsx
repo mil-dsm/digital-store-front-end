@@ -2,12 +2,11 @@ import { useParams } from 'react-router-dom'
 import Layout from '../Layout'
 import Section from '../../components/Section/Section'
 import Gallery from '../../components/Gallery/Gallery'
-import { getProductById } from '../../data/products'
-import './ProductViewPage.css'
-// import BuyBox from '../components/BuyBox/BuyBox'
-// import ProductOptions from '../components/ProductOptions/ProductOptions'
-// import ProductListing from '../components/ProductListing/ProductListing'
+import BuyBox from '../../components/BuyBox/BuyBox'
 import ProductOptions from '../../components/ProductOptions/ProductOptions'
+import ProductListing from '../../components/ProductListing/ProductListing'
+import { products, getProductById } from '../../data/products'
+import './ProductViewPage.css'
 
 function ProductViewPage() {
   const { id } = useParams() // o ":id" da rota /product/:id
@@ -20,6 +19,9 @@ function ProductViewPage() {
       </Layout>
     )
   }
+
+  // Mostra 4 produtos, menos o que a pessoa já está vendo
+  const related = products.filter((item) => item.id !== product.id).slice(0, 4)
 
   return (
     <Layout>
@@ -34,15 +36,29 @@ function ProductViewPage() {
           />
 
           <div className="product-view__info">
-            {/* Teste BuyBox */}
-            <h1>{product.name}</h1>
-            <ProductOptions options={product.sizes} shape="square" radius="4px" type="text" />
-            <ProductOptions options={product.colors} shape="circle" type="color" />
+            <BuyBox
+              name={product.name}
+              reference={product.reference}
+              stars={product.stars}
+              rating={product.rating}
+              price={product.price}
+              priceDiscount={product.priceDiscount}
+              description={product.description}
+            >
+              <div>
+                <p className="buybox__label">Tamanho</p>
+                <ProductOptions options={product.sizes} shape="square" radius="4px" type="text" />
+              </div>
+              <div>
+                <p className="buybox__label">Cor</p>
+                <ProductOptions options={product.colors} shape="circle" type="color" />
+              </div>
+            </BuyBox>
           </div>
         </div>
 
         <Section title="Produtos recomendados" titleAlign="left" link={{ text: 'Ver todos', href: '/products' }}>
-          <p>TODO: ProductListing</p>
+          <ProductListing products={related} />
         </Section>
       </div>
     </Layout>

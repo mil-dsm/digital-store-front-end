@@ -45,3 +45,7 @@ img {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+main {
+  background: var(--background);
+}
