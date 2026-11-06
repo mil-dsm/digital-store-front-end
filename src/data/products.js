@@ -1,4 +1,4 @@
-// "Banco de dados" local dos produtos. Os objetos têm os campos do README
+// Banco de dados local dos produtos. Os objetos têm os campos do README
 // (name, image, price, priceDiscount) mais o que as páginas precisam:
 // id (para a rota /product/:id), brand/category (filtros) e os dados do BuyBox.
 //
