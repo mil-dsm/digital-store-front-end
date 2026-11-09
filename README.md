@@ -15,6 +15,7 @@ npm run build    # gera a versão de produção
 ## Estrutura
 
 ```
+public/            imagens
 src/
 ├── assets/        SVGs (logos, ícones)
 ├── components/    componentes reutilizáveis (uma pasta por componente)
