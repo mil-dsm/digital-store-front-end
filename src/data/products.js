@@ -18,14 +18,14 @@ const description =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
 export const products = [
-  { id: 1, name: 'Tênis K-Swiss V8 - Masculino', brand: 'K-Swiss', category: 'Tênis', image: '/product-thumb-1.jpeg', price: 200, priceDiscount: 100 },
-  { id: 2, name: 'Tênis Nike Air Force - Masculino', brand: 'Nike', category: 'Tênis', image: '/product-thumb-2.jpeg', price: 250 },
-  { id: 3, name: 'Tênis Adidas Runner - Feminino', brand: 'Adidas', category: 'Tênis', image: '/product-thumb-3.jpeg', price: 300, priceDiscount: 219.9 },
-  { id: 4, name: 'Tênis Puma Street - Unissex', brand: 'Puma', category: 'Tênis', image: '/product-thumb-4.jpeg', price: 180 },
-  { id: 5, name: 'Tênis K-Swiss Classic - Feminino', brand: 'K-Swiss', category: 'Tênis', image: '/product-thumb-5.jpeg', price: 220, priceDiscount: 149.9 },
-  { id: 6, name: 'Tênis Nike Court - Masculino', brand: 'Nike', category: 'Tênis', image: '/product-thumb-1.jpeg', price: 270 },
-  { id: 7, name: 'Tênis Adidas Street - Unissex', brand: 'Adidas', category: 'Tênis', image: '/product-thumb-2.jpeg', price: 199.9, priceDiscount: 129.9 },
-  { id: 8, name: 'Tênis Puma Run - Feminino', brand: 'Puma', category: 'Tênis', image: '/product-thumb-3.jpeg', price: 210 },
+  { id: 1, name: ' K-Swiss V8 - Masculino', brand: 'K-Swiss', category: 'Tênis', image: '/product-thumb-1.jpeg', price: 200, priceDiscount: 100 },
+  { id: 2, name: ' Nike Air Force - Masculino', brand: 'Nike', category: 'Tênis', image: '/product-thumb-2.jpeg', price: 250 },
+  { id: 3, name: ' Adidas Runner - Feminino', brand: 'Adidas', category: 'Tênis', image: '/product-thumb-3.jpeg', price: 300, priceDiscount: 219.9 },
+  { id: 4, name: ' Puma Street - Unissex', brand: 'Puma', category: 'Tênis', image: '/product-thumb-4.jpeg', price: 180 },
+  { id: 5, name: ' K-Swiss Classic - Feminino', brand: 'K-Swiss', category: 'Tênis', image: '/product-thumb-5.jpeg', price: 220, priceDiscount: 149.9 },
+  { id: 6, name: ' Nike Court - Masculino', brand: 'Nike', category: 'Tênis', image: '/product-thumb-1.jpeg', price: 270 },
+  { id: 7, name: ' Adidas Street - Unissex', brand: 'Adidas', category: 'Tênis', image: '/product-thumb-2.jpeg', price: 199.9, priceDiscount: 129.9 },
+  { id: 8, name: ' Puma Run - Feminino', brand: 'Puma', category: 'Tênis', image: '/product-thumb-3.jpeg', price: 210 },
 ].map((product) => ({
   // Dados extras usados só na página do produto (BuyBox e Gallery).
   reference: `REF-${String(product.id).padStart(4, '0')}`,

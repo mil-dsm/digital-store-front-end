@@ -1,6 +1,13 @@
 /* Estilos do ProductListing */
 .productlisting {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .productlisting {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
 }

@@ -53,3 +53,38 @@
 .listing__content {
     flex: 1 1 600px;
 }
+
+.listing__filter-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .listing__sidebar,
+    .listing__order select,
+    .listing__filters {
+        width: 100%;
+    }
+
+    .listing__filter-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        border: none;
+        border-radius: 4px;
+        background: var(--primary);
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .listing__filters {
+        display: none;
+    }
+
+    .listing__filters--open {
+        display: block;
+    }
+}

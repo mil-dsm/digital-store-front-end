@@ -41,7 +41,7 @@ img {
 /* Largura máxima do conteúdo, usada pelas páginas. */
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1272px;
   margin: 0 auto;
   padding: 0 16px;
 }

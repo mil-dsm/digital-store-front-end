@@ -12,7 +12,7 @@ function Gallery({ images, width, height, radius, showThumbs, className = '' }) 
 
   return (
     <div className={`gallery ${className}`} style={{ maxWidth: width }}>
-      <div className="gallery__slide" style={{ height, borderRadius: radius }}>
+      <div className="gallery__slide" style={{ '--gallery-height': height, borderRadius: radius }}>
         {/* Todas as imagens ficam lado a lado; deslocamos a barra para mostrar a atual */}
         <div className="gallery__track" style={{ transform: `translateX(-${current * 100}%)` }}>
           {images.map((image, index) => (

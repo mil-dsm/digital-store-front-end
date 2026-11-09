@@ -7,8 +7,8 @@
 }
 
 .footer__content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1.1fr 1fr;
     gap: 48px;
 }
 
@@ -52,4 +52,15 @@
 
 .footer__copy {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer__content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__brand {
+        grid-column: 1 / -1;
+        max-width: none;
+    }
 }

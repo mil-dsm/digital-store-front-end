@@ -24,6 +24,7 @@ function ProductListingPage() {
 
   const [order, setOrder] = useState('')
   const [brands, setBrands] = useState([])
+  const [filtersOpen, setFiltersOpen] = useState(false)
 
   // Marca ou desmarca uma marca na lista
   function toggleBrand(brand) {
@@ -64,7 +65,15 @@ function ProductListingPage() {
             </select>
           </label>
 
-          <div className="listing__filters">
+          <button
+            type="button"
+            className="listing__filter-toggle"
+            onClick={() => setFiltersOpen(!filtersOpen)}
+          >
+            {filtersOpen ? 'Esconder filtros' : 'Filtrar'}
+          </button>
+
+          <div className={`listing__filters ${filtersOpen ? 'listing__filters--open' : ''}`}>
             <h3>Filtrar por</h3>
             <hr />
             <FilterGroup

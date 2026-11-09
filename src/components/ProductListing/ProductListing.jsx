@@ -13,6 +13,7 @@ function ProductListing({ products }) {
           name={product.name}
           price={product.price}
           priceDiscount={product.priceDiscount}
+          category={product.category}
         />
       ))}
     </div>

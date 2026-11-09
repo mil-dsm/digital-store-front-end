@@ -71,4 +71,168 @@
 .header__nav a.active {
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
+    font-weight: 700;
+}
+
+/* Itens que só existem no celular ficam escondidos no desktop */
+.header__menu-button,
+.header__search-toggle {
+    display: none;
+}
+
+.header__overlay {
+    display: none;
+}
+
+.header__cart {
+    position: relative;
+    display: flex;
+}
+
+.header__badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: 8px;
+    background: var(--error);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 0;
+    }
+
+    .header__top {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .header__menu-button,
+    .header__search-toggle {
+        display: flex;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: var(--dark-gray-2);
+    }
+
+    .header__search-toggle {
+        color: var(--primary);
+    }
+
+    .header__logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__logo img {
+        width: 140px;
+    }
+
+    /* some o que vai para o menu lateral */
+    .header__signup,
+    .header__login,
+    .header__nav {
+        display: none;
+    }
+
+    /* busca: escondida até clicar na lupa */
+    .header__search {
+        display: none;
+    }
+
+    .header__search--open {
+        display: block;
+        order: 5;
+        flex: 1 1 100%;
+    }
+
+    .header__search input {
+        height: 48px;
+    }
+
+    /* menu lateral */
+    .header__overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .header__drawer {
+        display: flex;
+        flex-direction: column;
+        width: 308px;
+        max-width: 85%;
+        height: 100%;
+        padding: 32px 30px;
+        background: var(--white);
+    }
+
+    .header__drawer-title {
+        margin-bottom: 24px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--dark-gray-2);
+    }
+
+    .header__drawer nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .header__drawer nav a {
+        padding-bottom: 4px;
+        color: var(--dark-gray-2);
+        text-decoration: none;
+    }
+
+    .header__drawer nav a.active {
+        color: var(--primary);
+        font-weight: 700;
+        border-bottom: 2px solid var(--primary);
+    }
+
+    .header__drawer-footer {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .header__drawer-footer hr {
+        border: none;
+        border-top: 1px solid var(--light-gray-2);
+    }
+
+    .header__drawer-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        border-radius: 4px;
+        background: var(--primary);
+        color: var(--white);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .header__drawer-signup {
+        text-align: center;
+        text-decoration: underline;
+    }
 }

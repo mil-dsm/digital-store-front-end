@@ -29,3 +29,12 @@
 .product-options__item--selected {
     border: 2px solid var(--primary);
 }
+
+@media (max-width: 768px) {
+    .product-options__item--square {
+        height: 40px;
+        min-width: 40px;
+        padding: 0 12px;
+        font-size: 16px;
+    }
+}
