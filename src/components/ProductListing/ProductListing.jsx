@@ -1,6 +1,5 @@
 import ProductCard from '../ProductCard/ProductCard'
 import './ProductListing.css'
-import { Link } from 'react-router-dom'
 
 function ProductListing({ products }) {
   return (

@@ -4,23 +4,9 @@ import facebook from '../../assets/facebook.svg'
 import instagram from '../../assets/instagram.svg'
 import twitter from '../../assets/twitter.svg'
 import './Footer.css'
+import FooterInfo from '../FooterInfo/FooterInfo'
 
 // Componente de informações (README 3.2.1): título + lista de links.
-function FooterInfo({ title, informations }) {
-  return (
-    <div className="footer__info">
-      <h3>{title}</h3>
-      <ul>
-        {informations.map((info) => (
-          <li key={info.text}>
-            <Link to={info.link}>{info.text}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
 function Footer() {
   const informacao = [
     { text: 'Sobre Drip Store', link: '/about' },

@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductListingPage />} />
+        <Route path="/produtos" element={<ProductListingPage />} />
         <Route path="/product/:id" element={<ProductViewPage />} />
 
         {/* Páginas sem especificação: só um texto "em construção". */}
