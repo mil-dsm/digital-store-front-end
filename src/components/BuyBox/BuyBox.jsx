@@ -1,6 +1,21 @@
 import starIcon from '../../assets/star-icon.svg'
 import './BuyBox.css'
 
+// Formato brasileiro, com 2 casas
+const formatPrice = (value) => value.toFixed(2).replace('.', ',')
+
+// "R$" pequeno + reais grandes + centavos pequenos
+function Price({ value }) {
+  const [reais, centavos] = formatPrice(value).split(',')
+  return (
+    <span className="buybox__price">
+      <span className="buybox__currency">R$</span>
+      <span className="buybox__integer">{reais}</span>
+      <span className="buybox__cents">,{centavos}</span>
+    </span>
+  )
+}
+
 function BuyBox({
   name,
   reference,
@@ -27,18 +42,18 @@ function BuyBox({
       <div className="buybox__prices">
         {priceDiscount ? (
           <>
-            <span className="buybox__price">${priceDiscount}</span>
-            <span className="buybox__price buybox__price--old">${price}</span>
+            <Price value={priceDiscount} />
+            <span className="buybox__price buybox__price--old">{formatPrice(price)}</span>
           </>
         ) : (
-          <span className="buybox__price">${price}</span>
+          <Price value={price} />
         )}
       </div>
 
       <p className="buybox__label">Descrição do produto</p>
       <p className="buybox__description">{description}</p>
 
-      {/* Aqui entram os ProductOptions passados pela página */}
+      {/* ProductOptions passados pela página */}
       {children}
 
       <button type="button" className="buybox__buy">COMPRAR</button>

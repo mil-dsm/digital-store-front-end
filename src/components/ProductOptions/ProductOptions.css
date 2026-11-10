@@ -28,6 +28,8 @@
 
 .product-options__item--selected {
     border: 2px solid var(--primary);
+    background: var(--primary);
+    color: var(--white);
 }
 
 @media (max-width: 768px) {

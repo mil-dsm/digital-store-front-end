@@ -53,6 +53,20 @@
     color: var(--dark-gray-2);
 }
 
+.buybox__currency {
+    margin-right: 4px;
+    font-size: 16px;
+}
+
+.buybox__integer {
+    font-weight: 700;
+}
+
+.buybox__cents {
+    font-size: 16px;
+    font-weight: 700;
+}
+
 .buybox__price--old {
     font-size: 16px;
     color: var(--light-gray-2);
@@ -69,6 +83,10 @@
     font-weight: 700;
     color: var(--light-gray);
     margin-bottom: 8px;
+}
+
+.buybox__label+.buybox__description {
+    margin-top: -16px;
 }
 
 .buybox__buy {
