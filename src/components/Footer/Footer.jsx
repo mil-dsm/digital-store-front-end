@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
 import facebook from '../../assets/facebook.svg'
 import instagram from '../../assets/instagram.svg'
