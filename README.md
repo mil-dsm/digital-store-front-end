@@ -4,7 +4,7 @@ Loja virtual desenvolvida em **React** como projeto final de Front-end do curso 
 
 **Autora:** Milena de Sousa Mesquita
 
-**Site publicado:** _(cole aqui o link da Vercel depois do deploy)_
+**Site publicado:** _https://digital-store-front-end-entrega.vercel.app_
 
 ## Tecnologias
 
